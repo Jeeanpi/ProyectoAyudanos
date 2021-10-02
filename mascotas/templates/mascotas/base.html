@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+
+{% load static %}
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayudanos</title>
+
+  <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+  <style>
+    body {
+      color: #000;
+      overflow-x: hidden;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%
+    }
+
+    .card {
+      padding: 30px 40px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      border: none !important;
+      box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+    }
+
+    .blue-text {
+      color: #00BCD4
+    }
+
+    .form-control-label {
+      margin-bottom: 0
+    }
+
+    input,
+    textarea,
+    button {
+      padding: 8px 15px;
+      border-radius: 5px !important;
+      margin: 5px 0px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      font-size: 18px !important;
+      font-weight: 300
+    }
+
+    input:focus,
+    textarea:focus {
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      border: 1px solid #00BCD4;
+      outline-width: 0;
+      font-weight: 400
+    }
+
+    .btn-block {
+      text-transform: uppercase;
+      font-size: 15px !important;
+      font-weight: 400;
+      height: 43px;
+      cursor: pointer
+    }
+
+    .btn-block:hover {
+      color: #fff !important
+    }
+
+    button:focus {
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      outline-width: 0
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type='text/javascript'
+    src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+
+  <script src="{% static 'js/direccion.js' %}"></script>
+  <script src="{% static 'js/validarRegistro.js' %}"></script>
+  <script src="{% static 'js/validarRUT.js' %}"></script>
+
+
+  <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .llamanos {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #212F3D;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 9px #212F3D;
+    }
+
+
+    .tratamientos {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.0);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 9px #212F3D;
+    }
+
+    .tratamientos:hover {
+      background-color: #F1C40F
+    }
+
+    .tratamientos:active {
+      background-color: #FDFF70;
+      box-shadow: 0 5px #FDFF70;
+      transform: translateY(4px);
+    }
+
+    .llamanos:hover {
+      background-color: #F1C40F
+    }
+
+    .llamanos:active {
+      background-color: #333;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    .titulo {
+      font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+      font-size: 50px;
+      padding: 70px 20px;
+      text-align: center;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+    }
+
+    .titulo2 {
+      font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+      font-size: 40px;
+      padding: 70px 20px;
+      text-align: center;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+    }
+
+    .deepshadow {
+      color: #e0dfdc;
+      background-color: rgba(0, 0, 0, 0.5);
+      letter-spacing: .1em;
+      text-shadow:
+        0 -1px 0 #fff,
+        0 1px 0 #ffffff00,
+        0 2px 0 #ffffff00,
+        0 3px 0 #ffffff00,
+        0 4px 0 #ffffff00,
+        0 5px 0 #ffffff00,
+        0 6px 0 #ffffff00,
+        0 7px 0 #ffffff00,
+        0 8px 0 #ffffff00,
+        0 9px 0 #ffffff00,
+        0 10px 0 #ffffff00,
+        0 11px 0 #ffffff00,
+        0 12px 0 #ffffff00,
+        0 13px 0 #ffffff00,
+        0 14px 0 #ffffff00,
+        0 15px 0 #ffffff00,
+        0 22px 30px rgba(0, 0, 0, 0.9);
+    }
+
+    .mcu_cont_footer {
+      background-color: rgba(44, 85, 112, 0.6);
+      padding: 2%;
+      color: #fff;
+      margin-top: 100px;
+    }
+
+    .mcu_banner_galeria {
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("{% static 'banner-W-Veterinaria.jpg' %}")
+    }
+
+    .mcu_sombra {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      padding: 70px;
+      width: 80%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      margin: auto;
+    }
+  </style>
+
+  {% load pwa %}
+
+  {% progressive_web_app_meta %}
+</head>
+
+{% block js %}
+
+{% endblock %}
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-light"
+      style="background-color: rgba(45, 60, 70, 0.9); " aria-label="Third navbar example">
+      <div class="container-fluid">
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="{% static 'img/isotipo.png' %}" class="bi me-2" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+          aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+            <li class="nav-item">
+              {% if user.is_authenticated %}
+
+                <a href="Cerrar Sesion">
+
+                </a>
+
+              {% else %}
+
+
+              {% endif %}
+
+
+              <a href="/" class="nav-link px-2 text-secondary">Home</a>
+            </li>
+            {% if perms.reserva.add_cliente %}
+            <li class="nav-item">
+              <a href="{% url 'contratarPlan' %}" class="nav-link px-2 text-white">Planes</a>
+            </li>
+            {% else %}
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a href="{% url 'agregar_mascota' %}" class="nav-link px-2 text-white">Agregar Mascota</a>
+            </li>
+
+            {% endif %}
+            {% endif %}
+
+            {% if perms.reserva.add_cliente %}
+
+            {% else %}
+            <!-- Example split danger button -->
+            <div class="btn-group">
+              <a type="button" class="btn btn-secondary"
+                style="background-color: rgba(45, 60, 70, 0); color:rgba(255, 255, 255, 0.8) ; "
+                href="{% url 'servicios' %}">Servicios</a>
+              <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                style="background-color: rgba(45, 60, 70, 0.4); " data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'servicios' %}#planes">Planes</a> </li>
+                <li><a class="dropdown-item" href="{% url 'servicios' %}#servicios">Servicios</a>
+                </li>
+                <li><a class="dropdown-item" href="{% url 'mis_mascotas' %}">Mis Mascotas</a></li>
+                
+               
+              </ul>
+            </div>
+            {% endif %}
+            {% if perms.reserva.add_empleado %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                aria-expanded="false">Administrador</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03"
+                style="background-color: rgba(255, 255, 255, 0.8);">
+                <li><a class="dropdown-item" href="#">Ordenes De Pedido</a></li>
+                <li><a class="dropdown-item" href="#"> Horas</a></li>
+                <li><a class="dropdown-item" href="{% url 'listar_cliente' %}">Cliente</a></li>
+                <li><a class="dropdown-item" href="{% url 'listar_mascota' %}">Mascotas</a></li>
+                <li><a class="dropdown-item" href="#">Servicios</a></li>
+                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="#">Proveedores</a></li>
+                <li><a class="dropdown-item" href="#">Boletas y Facturas</a></li>
+
+              </ul>
+            </li>
+            {% endif %}
+            {% if perms.reserva.add_empelado %}
+
+            {% else %}
+            
+            {% if perms.reserva.add_cliente %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                aria-expanded="false">Mascotas</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03"
+                style="background-color: rgba(255, 255, 255, 0.8);">
+                <li><a class="dropdown-item" href="#">Ordenes De Pedido</a></li>
+                <li><a class="dropdown-item" href="#">Cliente</a></li>
+                <li><a class="dropdown-item" href="#">Servicios</a></li>
+                <li><a class="dropdown-item" href="#">Proveedores</a></li>
+                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="#">Boletas y Facturas</a></li>
+              </ul>
+            </li>
+            {% endif %}
+            {% endif %}
+          </ul>
+          {% if user.is_authenticated %}
+          <div class="text-end">
+            <a style="color:#fff; font-size: 24px; vertical-align: middle;;">Bienvenido</a>
+            <a class="btn" style="background-color:#F1C40F">{{ user.username }}</a>
+            <a href="{% url 'logout' %}" class="btn btn-outline-light me-2">Cerrar Sesión</a>
+            {% else %}
+            <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+            <a href="{% url 'registro' %}" class="btn btn-outline-light" style="background-color:#F1C40F">Registrar</a>
+
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <!--Termina aqui si ojo piojo-->
+  <div class="contenedor">
+
+    {% block content %}
+
+
+    {% endblock %}
+
+  </div>
+
+  <footer>
+    <div class="mcu_cont_footer">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h6>Ayudanos</h6>
+            <p>Ubicación: Av. Salvador 95. Of. 402</p>
+            <p>Contacto: 2 23411881 /+56 9 40538364</p>
+          </div>
+          <div class="col-md-4 text-center" style="text-align: justify; text-justify: inter-word;">
+            <h6>¿Quienes Somos?</h6>
+            <p style="font-size: 12px;">Somos una asociación especializada en cuidados de mascotas. Más que un equipo, formamos
+              una familia que tiene como misión: hacer de su visita al dentista, ¡una experiencia agradable! . Durante 8
+              años les hemos brindado a nuestros pacientes una atención exclusiva, ambiente familiar y un servicio
+              impecable. Le garantizamos costos a su alcance en todos los planes, evaluación sin costo y mucho más.</p>
+          </div>
+          <div class="col-md-4">
+            <h6>MISIÓN</h6>
+            <p style="font-size: 10px;">Nuestro propósito es brindarle a nuestros clientes una “experiencia agradable”
+              bajo un ambiente familiar y cercano.</p>
+            <p style="font-size: 10px;">Concientizar y orientar a la sociedad, la importancia y necesidad de cuidar la
+              seguridad animal, a través del seguimiento y la prevención.</p>
+            <p style="font-size: 10px;">Ser profesionales con estándares de calidad, contar instalaciones óptimas y
+              tecnología de punta para las familias chilenas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% if messages %}
+{% for m in messages %}
+<script>
+  Swal.fire({
+    "title": "Procceso Completado",
+    "text": "{{m}}",
+    "icon": "success"
+  })
+</script>
+{% endfor %}
+{% endif %}
+
+</html>

@@ -1,0 +1,149 @@
+{% extends 'mascotas/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <main>
+    <section>
+      <div class="mcu_banner_galeria">
+        <div class="mcu_sombra">
+          <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 70px;">Servicios</h1>
+          <hr>
+        </div>
+      </div>
+    </section>
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="planes">
+        <div class="col-md-7">
+          <h2 class="featurette-heading text-center" style="font-family: Arial;">Planes</h2>
+          <p class="lead">Los <strong>planes de seguridad en mascotas </strong>son una solución efectiva y rápida para quienes por
+            diversos motivos han perdido una o más mascotas. </p>
+
+          <p class="lead">Consisten en generar una comunidad de <strong>mascotas</strong> para tener una  <strong>solución</strong>, ante posibles
+            casos de perdida <strong>y poder hacer una alarma para toda la comunidad</strong></p>
+
+          <p class="lead">Unete de una vez y protege a tus mascotas.</p>
+          <p class="lead">Planes Mensuales.</p>
+          <p class="lead">Planes Anuales.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="700" src="{% static 'img/gato.jpg' %}" style="width:500px;height:300px;"><br><br>
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="700" src="{% static 'img/gato.jpg' %}" style="width:500px;height:300px;">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="servicios">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading text-center" style="font-family: Arial;">Servicios</h2>
+          <br>
+          <p class="lead"> Mediante esta <strong>Plataforma </strong> se presentan los servicios a disponer <strong>Servicios </strong><strong>
+              </strong></p>
+          <br>
+          <p class="lead"> Servicio #1</p>
+          <br>
+          <p class="lead"> Servicio #2</p>
+          <br>
+          <p class="lead"> Servicio #3</p>
+          <br>
+          <p class="lead"> Servicio #4</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="700" src="{% static 'img/pug.jpg' %}" style="width:500px;height:250px;"><br><br>
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500"
+            src="{% static 'img/pug.jpg' %}"
+            style="width:500px;height:250px;">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <br>
+      <section class="py-5 text-center container" id="misMascotas">
+        <div class="row py-lg-7">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            <h1 class="featurette-heading text-center" style="font-family: Arial;">Mis Mascotas</h1>
+            <p class="lead">Dirigida especialmente a crear sonrisas en armonía y a aumentar el autoestima y la seguridad
+              de nuestros clientes.
+            </p>
+            <p class="lead">Cada plan de <strong>seguridad</strong> es personalizado, ya que dependerá de
+              las necesidades y de la salud de la mascota, quien antes de recurrir a algún tratamiento será avizado su respectivo dueño.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--Mis Mascotas / Galeria -->
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <img class="bd-placeholder-img card-img-top" src="{% static 'img/pug.jpg' %}" style="width: 320px; height: 300px;">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <img class="bd-placeholder-img card-img-top" src="{% static 'img/gato.jpg' %}" style="width: 320px; height: 300px;">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <img class="bd-placeholder-img card-img-top" src="{% static 'img/pug.jpg' %}" style="width: 320px; height: 300px;">
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <img class="bd-placeholder-img card-img-top" src="{% static 'img/gato.jpg' %}" style="width: 320px; height: 300px;">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <img class="bd-placeholder-img card-img-top" src="{% static 'img/pug.jpg' %}" style="width: 320px; height: 300px;">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <img class="bd-placeholder-img card-img-top" src="{% static 'img/gato.jpg' %}" style="width: 320px; height: 300px;">
+                </div>
+              </div>
+            </div>
+
+            <br>
+          </div><!-- /.container -->
+          <hr class="featurette-divider">
+          <br>
+          <br>
+      
+            <br>
+          </div><!-- /.container -->
+          
+      <hr class="featurette-divider"><!-- /.container -->
+            </div>  </div>  </div>  </div>  </div>  </div>  </div> 
+
+  </main>
+
+{% endblock %}
+</html>

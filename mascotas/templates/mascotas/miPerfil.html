@@ -1,0 +1,40 @@
+{% extends 'mascotas/base.html' %}
+
+{% block css %}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+{% endblock %}
+
+{% block js %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% endblock %}
+<br><br><br>
+{% block content %}
+
+{% load static %}
+
+<br><br><br>
+{% for m2 in mascotas %}
+ <div class="container">
+    <div class="card align-items-center">
+        <div class="card-body">
+            {% if m2.imagen %}
+                <img src="{{ m.imagen.url }}" alt="imagen mascota">
+                <br><br><br>
+            {% endif %}
+            <div class="detalle">
+                <h5>{{ m2.nombre }}</h5>
+                <h2>{{ m2.raza }}</h2>
+                <h3>{{m2.propietario}}</h3>
+                <td>
+                  <a href="{% url 'mi_perfil'%}" class="btn btn-success">Ver Perfil</a>
+                  <a href="{% url 'modificar_mascota' m.id %}" class="btn btn-info">Modificar</a>
+                  <a href="#" onclick="eliminarMascota({{ m.id }})" class="btn btn-danger">Eliminar</a>
+              </td>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endfor %}
+
+{% endblock %}

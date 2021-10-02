@@ -1,0 +1,24 @@
+{% extends 'mascotas/base.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+{% load crispy_forms_tags %}
+<h1>Contratar Plan</h1>
+<form action="" method="post" class="formulario_contratarPlan">
+<div class="card">
+    <div class="card-body">
+        
+
+            {% csrf_token %}
+
+            {{ form | crispy }}
+            <input type="submit" value="Contratar">
+        </form>
+
+        {{ mensaje }}
+    </div>
+</div>
+
+{% endblock %}
